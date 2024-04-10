@@ -2,7 +2,7 @@
   <div class="flex flex-col h-screen min-h-[50rem] justify-between min-w-fit">
     <nav>
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
+      <router-link to="/contact/list">Contact list</router-link> |
       <router-link to="/login">Login</router-link>
     </nav>
     <router-view />

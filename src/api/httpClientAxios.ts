@@ -42,7 +42,7 @@ const createHttpClient = (): AxiosInstance => {
         const userStore = useUserStore();
         await userStore.refreshToken();
         // redo the request
-        // return client.request(error.config);
+        return client.request(error.config);
       }
       return Promise.reject(error);
     }

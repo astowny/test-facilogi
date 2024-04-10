@@ -141,6 +141,8 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@heroicons/vue/24/solid";
+import { useUserStore } from "@/store/user/userStore";
+import { useRouter } from "vue-router";
 
 const errorApi = ref("");
 const pagination = ref({ total: 1, pages: 1 });
@@ -281,6 +283,13 @@ const goToPage = async (numPage) => {
 };
 
 onMounted(async () => {
+  const userStore = useUserStore();
+  userStore.init();
+  const router = useRouter();
+  if (!userStore.isLogged) {
+    router.push("/login");
+  }
+
   goToPage(1);
 });
 </script>
