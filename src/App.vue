@@ -1,9 +1,13 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <div class="flex flex-col h-screen min-h-[50rem] justify-between min-w-fit">
+    <nav>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> |
+      <router-link to="/login">Login</router-link>
+    </nav>
+    <router-view />
+    <footer></footer>
+  </div>
 </template>
 
 <style>
@@ -13,6 +17,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: #eaf1f7;
 }
 
 nav {
